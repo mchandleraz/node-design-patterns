@@ -7,12 +7,13 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "istanbul cover _mocha -- -R spec && ./node_modules/.bin/codecov -t 12a79f0d-6d29-4dc7-9e2a-2b68230fec81"
   },
   "author": "mcaz689@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "chai": "^3.5.0",
+    "codecov": "^1.0.1",
     "mocha": "^2.4.5"
   }
 }
