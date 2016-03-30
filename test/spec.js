@@ -53,6 +53,10 @@ describe('Prototype', function () {
 		var alice = new Person('alice');
 		expect(alice.name).to.equal('alice');
 	});
+	it('should party', function() {
+		var rod = new Person('rod', null, ['party']);
+		expect(rod.getHobbies()).to.equal('i party');
+	})
 
 	describe('#greet', function() {
 		it('should expect a String `greeting` param', function() {
