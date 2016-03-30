@@ -1,9 +1,13 @@
 var should 		= require('chai').should();
 var expect 		= require('chai').expect;
 
-var singleton = require('../src/singleton');
+var singleton 	= require('../src/singleton');
+var prototype 	= require('../src/prototype');
 
 describe('Singleton', function () {
+	it('should return an object', function() {
+		expect(singleton).to.be.an('object');
+	});
 	describe('private property', function () {
 		it('should return undefined when calling singleton.x', function() {
 			expect(singleton.x).to.equal(undefined);
@@ -36,4 +40,10 @@ describe('Singleton', function () {
 			})
 		})
 	});
-})
+});
+
+describe('Prototype', function () {
+	it('should return a function', function() {
+		expect(prototype).to.be.a('function');
+	});
+});
