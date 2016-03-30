@@ -53,4 +53,17 @@ describe('Prototype', function () {
 		var alice = new Person('alice');
 		expect(alice.name).to.equal('alice');
 	});
+
+	describe('#greet', function() {
+		it('should expect a String `greeting` param', function() {
+			var bob = new Person('bob');
+			expect(function() {
+				bob.greet();
+			}).to.throw(Error);
+		});
+		it('should return a String', function() {
+			var dan = new Person('dan');
+			expect(dan.greet('Sup')).to.be.a('string');
+		});
+	});
 });
