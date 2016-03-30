@@ -1,5 +1,6 @@
-module.exports = User;
+module.exports = Person;
 
-function User(n) {
-	this.name = n;
+function Person(name, age) {
+	this.name = name;
+	this.age = age;
 }

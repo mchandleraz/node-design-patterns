@@ -43,7 +43,14 @@ describe('Singleton', function () {
 });
 
 describe('Prototype', function () {
+
+	var Person = prototype; // actual `Class` name is Person
+
 	it('should return a function', function() {
-		expect(prototype).to.be.a('function');
+		expect(Person).to.be.a('function');
+	});
+	it('should have "name" property', function() {
+		var alice = new Person('alice');
+		expect(alice.name).to.equal('alice');
 	});
 });
