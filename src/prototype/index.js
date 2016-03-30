@@ -14,13 +14,11 @@ Person.prototype.greet = function(greeting) {
 };
 
 Person.prototype.getHobbies = function() {
-	var hobbiesString = '';
+	var hobbiesString = this.hobbies[0];
 	if (this.hobbies.length > 1) {
-		for (var i = this.hobbies.length - 1; i >= 0; i--) {
+		for (var i = this.hobbies.length - 1; i > 0; i--) {
 			hobbiesString += ', ' + this.hobbies[i];
 		}
-	} else {
-		hobbiesString = this.hobbies[0];
 	}
-	return 'i ' + hobbiesString;
+	return 'my name is ' + this.name + ' and i like to ' + hobbiesString;
 };

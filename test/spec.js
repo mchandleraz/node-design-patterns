@@ -55,8 +55,12 @@ describe('Prototype', function () {
 	});
 	it('should party', function() {
 		var rod = new Person('rod', null, ['party']);
-		expect(rod.getHobbies()).to.equal('i party');
-	})
+		expect(rod.getHobbies()).to.equal('my name is rod and i like to party');
+	});
+	it('should have more than one hobby too', function() {
+		var rico = new Person('rico', null, ['party', 'stunt']);
+		expect(rico.getHobbies()).to.equal('my name is rico and i like to party, stunt');
+	});
 
 	describe('#greet', function() {
 		it('should expect a String `greeting` param', function() {
